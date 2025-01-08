@@ -13,7 +13,7 @@ def generate_launch_description():
         ),
 
         TimerAction(
-            period=4.0,
+            period=2.0,
             actions=[
                 Node(
                     package='cavepi_detection',
@@ -36,16 +36,16 @@ def generate_launch_description():
             ]
         ),
 
-        TimerAction(
-            period=6.0, 
-            actions=[
-                Node(
-                    package='cavepi_detection',
-                    executable='data_sender',
-                    name='data_sender',
-                    output='screen'
-                )
-            ]
-        )
+        # TimerAction(
+        #     period=6.0, 
+        #     actions=[
+        #         Node(
+        #             package='cavepi_detection',
+        #             executable='data_sender',
+        #             name='data_sender',
+        #             output='screen'
+        #         )
+        #     ]
+        # )
 
     ])
