@@ -12,11 +12,16 @@ def generate_launch_description():
             output='screen'
         ),
 
-        Node(
-            package='cavepi_detection',
-            executable='qr_detector',
-            name='qr_detector',
-            output='screen'
+        TimerAction(
+            period=4.0,
+            actions=[
+                Node(
+                    package='cavepi_detection',
+                    executable='qr_detector',
+                    name='qr_detector',
+                    output='screen'
+                )
+            ]
         ),
 
         TimerAction(
